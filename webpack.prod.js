@@ -21,4 +21,18 @@ module.exports = merge(common, {
       },
     ],
   },
+  // Additional setup for serving JSON file in production
+  plugins: [
+    {
+      apply: (compiler) => {
+        compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
+          const sourcePath = path.join(__dirname, 'src/public/data/quis.json');
+          const destPath = path.join(__dirname, 'dist/public/data/quis.json');
+
+          // Copy the JSON file to the output directory
+          require('fs').copyFileSync(sourcePath, destPath);
+        });
+      },
+    },
+  ],
 });
