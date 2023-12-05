@@ -1,6 +1,7 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -21,18 +22,15 @@ module.exports = merge(common, {
       },
     ],
   },
-  // Additional setup for serving JSON file in production
   plugins: [
-    {
-      apply: (compiler) => {
-        compiler.hooks.afterEmit.tap('AfterEmitPlugin', (compilation) => {
-          const sourcePath = path.join(__dirname, 'src/public/data/quis.json');
-          const destPath = path.join(__dirname, 'dist/public/data/quis.json');
-
-          // Copy the JSON file to the output directory
-          require('fs').copyFileSync(sourcePath, destPath);
-        });
-      },
-    },
+    // Copy the JSON file to the output directory
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, 'src/public/data/quis.json'),
+          to: path.join(__dirname, 'dist/public/data/quis.json'),
+        },
+      ],
+    }),
   ],
 });
