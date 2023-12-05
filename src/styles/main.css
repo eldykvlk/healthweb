@@ -1,0 +1,125 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+main {
+  margin: 5em 0 2em;
+}
+
+img#logosomen {
+    height: 50px;
+}
+
+.bg {
+  background-image: url(../public/images/vector.png);
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-color: #f9fbfc
+}
+
+
+a {
+  cursor: pointer;
+}
+
+#line {
+  margin: auto;
+  border: 0.10em solid grey;
+  opacity: 10%;
+}
+
+/* ! Navbar Style */
+#navbar-brand img {
+  width: 9em;
+}
+
+#nav-item {
+  margin: 0 0.9em;
+}
+
+#nav-items {
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+
+/* ! Footer Style */
+footer {
+  background-color: #f8f9fa;
+  padding: 1em 0;
+}
+
+#footer-brand {
+  width: 10em;
+}
+
+#coloumn1 {
+  text-align: center;
+}
+
+#coloumn2,
+#coloumn3 {
+  margin-left: 6%;
+}
+
+#copyright {
+  text-align: center;
+  opacity: 40%;
+}
+
+/* ! Hero Section 1 Style */
+#hero-welcome, #hero-writer {
+  line-height: normal;
+}
+
+#section1 {
+  margin-bottom: 5em;
+}
+
+#hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+#hero-welcome {
+  color: #4BB1FB;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#hero-writer {
+  color: #211B3D;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+#hero-content {
+  text-align: center;
+}
+
+#btnmain {
+  width: 50%;
+}
+
+#hero-desc {
+  font-size: 1.2em;
+}
+
+/* ! Hero Section 2,3,4 */
+#section2, #section3, #section4 {
+  margin-bottom: 5em;
+}
+
+#hero-title {
+  color: #211B3D;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 0.6em;
+}
+
+#btn4 {
+  width: 50%;
+}
+
