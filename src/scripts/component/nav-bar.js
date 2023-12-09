@@ -6,10 +6,7 @@ class NavBar extends HTMLElement {
 
   connectedCallback() {
     this.innerHTML = `
-<<<<<<< HEAD
 
-
-<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">
       <img src="icons/logo.png" id="logosomen" alt="">
